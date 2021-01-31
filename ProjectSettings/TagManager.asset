@@ -7,6 +7,10 @@ TagManager:
   - Selectable
   - Panel
   - SceneSwitcher
+  - CushionItem
+  - Objective
+  - Shot
+  - Barrier
   layers:
   - Default
   - TransparentFX

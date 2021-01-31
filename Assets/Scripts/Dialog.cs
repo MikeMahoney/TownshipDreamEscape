@@ -9,4 +9,10 @@ public class Dialog
 
     [TextArea(3, 10)]
     public string[] messages;
+
+    [TextArea(3, 10)]
+    public string[] successMessages;
+
+    [TextArea(3, 10)]
+    public string[] failedMessages;
 }

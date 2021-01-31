@@ -1,88 +1,245 @@
 fileFormatVersion: 2
 guid: 87af33bde5b7d7f44b012333557f727f
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armature
-    100002: Body
-    100004: Bone
-    100006: Bone.001
-    100008: Bone.001_end
-    100010: Bone.002
-    100012: Bone.003
-    100014: Bone.004
-    100016: Bone.005
-    100018: Bone.006
-    100020: Bone.006_end
-    100022: Bone.007
-    100024: Bone.008
-    100026: Bone.009
-    100028: Bone.009_end
-    100030: Bone.010
-    100032: Bone.011
-    100034: Bone.012
-    100036: Bone.013
-    100038: Bone.014
-    100040: Bone.014_end
-    100042: Bone.015
-    100044: Bone.016
-    100046: Bone.017
-    100048: Bone.017_end
-    100050: Feet
-    100052: Hair
-    100054: //RootNode
-    100056: Pants
-    100058: Top
-    400000: Armature
-    400002: Body
-    400004: Bone
-    400006: Bone.001
-    400008: Bone.001_end
-    400010: Bone.002
-    400012: Bone.003
-    400014: Bone.004
-    400016: Bone.005
-    400018: Bone.006
-    400020: Bone.006_end
-    400022: Bone.007
-    400024: Bone.008
-    400026: Bone.009
-    400028: Bone.009_end
-    400030: Bone.010
-    400032: Bone.011
-    400034: Bone.012
-    400036: Bone.013
-    400038: Bone.014
-    400040: Bone.014_end
-    400042: Bone.015
-    400044: Bone.016
-    400046: Bone.017
-    400048: Bone.017_end
-    400050: Feet
-    400052: Hair
-    400054: //RootNode
-    400056: Pants
-    400058: Top
-    2100000: Material.003
-    2100002: Material.004
-    2100004: Material.005
-    2100006: Default OBJ
-    2100008: Material.002
-    4300000: Body
-    4300002: Top
-    4300004: Pants
-    4300006: Feet
-    4300008: Hair
-    9500000: //RootNode
-    13700000: Body
-    13700002: Feet
-    13700004: Hair
-    13700006: Pants
-    13700008: Top
-    2186277476908879412: ImportLogs
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armature
+  - first:
+      1: 100002
+    second: Body
+  - first:
+      1: 100004
+    second: Bone
+  - first:
+      1: 100006
+    second: Bone.001
+  - first:
+      1: 100008
+    second: Bone.001_end
+  - first:
+      1: 100010
+    second: Bone.002
+  - first:
+      1: 100012
+    second: Bone.003
+  - first:
+      1: 100014
+    second: Bone.004
+  - first:
+      1: 100016
+    second: Bone.005
+  - first:
+      1: 100018
+    second: Bone.006
+  - first:
+      1: 100020
+    second: Bone.006_end
+  - first:
+      1: 100022
+    second: Bone.007
+  - first:
+      1: 100024
+    second: Bone.008
+  - first:
+      1: 100026
+    second: Bone.009
+  - first:
+      1: 100028
+    second: Bone.009_end
+  - first:
+      1: 100030
+    second: Bone.010
+  - first:
+      1: 100032
+    second: Bone.011
+  - first:
+      1: 100034
+    second: Bone.012
+  - first:
+      1: 100036
+    second: Bone.013
+  - first:
+      1: 100038
+    second: Bone.014
+  - first:
+      1: 100040
+    second: Bone.014_end
+  - first:
+      1: 100042
+    second: Bone.015
+  - first:
+      1: 100044
+    second: Bone.016
+  - first:
+      1: 100046
+    second: Bone.017
+  - first:
+      1: 100048
+    second: Bone.017_end
+  - first:
+      1: 100050
+    second: Feet
+  - first:
+      1: 100052
+    second: Hair
+  - first:
+      1: 100054
+    second: //RootNode
+  - first:
+      1: 100056
+    second: Pants
+  - first:
+      1: 100058
+    second: Top
+  - first:
+      4: 400000
+    second: Armature
+  - first:
+      4: 400002
+    second: Body
+  - first:
+      4: 400004
+    second: Bone
+  - first:
+      4: 400006
+    second: Bone.001
+  - first:
+      4: 400008
+    second: Bone.001_end
+  - first:
+      4: 400010
+    second: Bone.002
+  - first:
+      4: 400012
+    second: Bone.003
+  - first:
+      4: 400014
+    second: Bone.004
+  - first:
+      4: 400016
+    second: Bone.005
+  - first:
+      4: 400018
+    second: Bone.006
+  - first:
+      4: 400020
+    second: Bone.006_end
+  - first:
+      4: 400022
+    second: Bone.007
+  - first:
+      4: 400024
+    second: Bone.008
+  - first:
+      4: 400026
+    second: Bone.009
+  - first:
+      4: 400028
+    second: Bone.009_end
+  - first:
+      4: 400030
+    second: Bone.010
+  - first:
+      4: 400032
+    second: Bone.011
+  - first:
+      4: 400034
+    second: Bone.012
+  - first:
+      4: 400036
+    second: Bone.013
+  - first:
+      4: 400038
+    second: Bone.014
+  - first:
+      4: 400040
+    second: Bone.014_end
+  - first:
+      4: 400042
+    second: Bone.015
+  - first:
+      4: 400044
+    second: Bone.016
+  - first:
+      4: 400046
+    second: Bone.017
+  - first:
+      4: 400048
+    second: Bone.017_end
+  - first:
+      4: 400050
+    second: Feet
+  - first:
+      4: 400052
+    second: Hair
+  - first:
+      4: 400054
+    second: //RootNode
+  - first:
+      4: 400056
+    second: Pants
+  - first:
+      4: 400058
+    second: Top
+  - first:
+      21: 2100000
+    second: Material.003
+  - first:
+      21: 2100002
+    second: Material.004
+  - first:
+      21: 2100004
+    second: Material.005
+  - first:
+      21: 2100006
+    second: Default OBJ
+  - first:
+      21: 2100008
+    second: Material.002
+  - first:
+      43: 4300000
+    second: Body
+  - first:
+      43: 4300002
+    second: Top
+  - first:
+      43: 4300004
+    second: Pants
+  - first:
+      43: 4300006
+    second: Feet
+  - first:
+      43: 4300008
+    second: Hair
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Body
+  - first:
+      137: 13700002
+    second: Feet
+  - first:
+      137: 13700004
+    second: Hair
+  - first:
+      137: 13700006
+    second: Pants
+  - first:
+      137: 13700008
+    second: Top
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  - first:
+      74: -623603649343465320
+    second: Scene
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -92,8 +249,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
-      human bone 'LeftUpperLeg' not found\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -116,25 +272,28 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -143,10 +302,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton:
     - name: labman(Clone)
@@ -306,13 +465,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -7,6 +7,10 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
 
+    [SerializeField] public GameObject inventory;
+    [SerializeField] public GameObject scenarios;
+    [SerializeField] public GameObject itemError;
+
     public float speed = 0.5f;
     public float gravity = -9.81f;
     public float jumpHeight = 1f;
@@ -22,8 +26,6 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
 
     void Start() {
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
-        Debug.Log(PlayerPrefs.HasKey("PosX"));
         if(SceneManager.GetActiveScene().buildIndex == 1 && PlayerPrefs.HasKey("PosX")) {
             Vector3 position = Vector3.zero;
 
@@ -36,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
+        UICheck();
+
         if(Cursor.lockState != CursorLockMode.Locked){
             return;
         }
@@ -52,13 +56,43 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
-        // JUMP LOGIC
-        // if (Input.GetButtonDown("Jump") && isGrounded) {
-        //     velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        // }
-
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    void UICheck() {
+         if (Input.GetKeyDown(KeyCode.Q) && !Input.GetKeyDown(KeyCode.E)) {
+            if(inventory.active){
+                PlayerPrefs.SetInt("ObjectiveMode", 0);
+                PlayerPrefs.SetString("CurrentObjective", "");
+                inventory.SetActive(false);
+                itemError.SetActive(false);
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            } else {
+                inventory.SetActive(true);
+                scenarios.SetActive(false);
+                itemError.SetActive(false);
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+         }
+         if (Input.GetKeyDown(KeyCode.E) && !Input.GetKeyDown(KeyCode.Q)) {
+            if(scenarios.active){
+                PlayerPrefs.SetInt("ObjectiveMode", 0);
+                PlayerPrefs.SetString("CurrentObjective", "");
+                itemError.SetActive(false);
+                scenarios.SetActive(false);
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            } else {
+                scenarios.SetActive(true);
+                inventory.SetActive(false);
+                itemError.SetActive(false);
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+         }
     }
 }

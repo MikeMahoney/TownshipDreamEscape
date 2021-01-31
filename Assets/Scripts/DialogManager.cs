@@ -14,19 +14,24 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
         messages = new Queue<string>();
-
     }
 
-    public void StartDialog(Dialog dialog) {
+    public void StartDialog(Dialog dialog, string status) {
         nameText.text = dialog.name;
-
         dialogPanel.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-
         messages.Clear();
 
-        foreach (string message in dialog.messages) {
+        Debug.Log(status);
+        string[] currentMessages = dialog.messages;
+        if (status == "SUCCESS") {
+            currentMessages = dialog.successMessages;
+        } else if (status == "FAILED") {
+            currentMessages = dialog.failedMessages;
+        }
+
+        foreach (string message in currentMessages) {
             messages.Enqueue(message);
         }
 
@@ -44,7 +49,6 @@ public class DialogManager : MonoBehaviour
     }
 
     public void EndDialog() {
-        Debug.Log("END");
         dialogPanel.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

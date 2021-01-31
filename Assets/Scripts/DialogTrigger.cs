@@ -5,8 +5,16 @@ using UnityEngine;
 public class DialogTrigger : MonoBehaviour
 {
     public Dialog dialog;
+    [SerializeField] private string scenarioId;
 
     public void TriggerDialog () {
-        FindObjectOfType<DialogManager>().StartDialog(dialog);
+        string scenarioStatus = "";
+        if (!PlayerPrefs.HasKey(scenarioId)) {
+            PlayerPrefs.SetString(scenarioId, "STARTED");
+        } else {
+            scenarioStatus = PlayerPrefs.GetString(scenarioId);
+        }
+        Debug.Log(scenarioStatus);
+        FindObjectOfType<DialogManager>().StartDialog(dialog, scenarioStatus);
     }
 }
