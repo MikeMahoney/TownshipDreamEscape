@@ -28,7 +28,7 @@ public class SelectionManager : MonoBehaviour
 
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 1)) {
+        if (Physics.Raycast(ray, out hit, 2)) {
             var selection = hit.transform;
             if (selection.CompareTag(selectableTag)) {
                 var selectionRenderer = selection.GetComponent<Renderer>();

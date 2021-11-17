@@ -9,6 +9,7 @@ public class SceneSwitcher : MonoBehaviour
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private int sceneIndex;
+    [SerializeField] private float[] playerPosition = new float[3];
 
     private Transform _selection;
     public Transform player;
@@ -33,9 +34,18 @@ public class SceneSwitcher : MonoBehaviour
                 _selection = selection;
                 if (Input.GetMouseButtonDown(0)) {
                     if(sceneIndex == 1) {
+                        Debug.Log(playerPosition[0]);
+                        if (playerPosition[0] != 0) {
+                            saveCustomPlayerPosition();
+                        }
                         SceneManager.LoadScene(sceneIndex);
                     } else {
-                        savePlayerPosition();
+                        Debug.Log(sceneIndex);
+                        if (playerPosition[0] != 0) {
+                            saveCustomPlayerPosition();
+                        } else {
+                            savePlayerPosition();
+                        }
                         SceneManager.LoadScene(sceneIndex);
                     }
                 }
@@ -47,5 +57,11 @@ public class SceneSwitcher : MonoBehaviour
         PlayerPrefs.SetFloat("PosX", player.position.x);
         PlayerPrefs.SetFloat("PosY", player.position.y);
         PlayerPrefs.SetFloat("PosZ", player.position.z);
+    }
+
+    public void saveCustomPlayerPosition() {
+        PlayerPrefs.SetFloat("PosX", playerPosition[0]);
+        PlayerPrefs.SetFloat("PosY", playerPosition[1]);
+        PlayerPrefs.SetFloat("PosZ", playerPosition[2]);
     }
 }

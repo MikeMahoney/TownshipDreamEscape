@@ -11,6 +11,9 @@ TagManager:
   - Objective
   - Shot
   - Barrier
+  - ShooterGate
+  - MusicVenueGate
+  - BackShooterGate
   layers:
   - Default
   - TransparentFX

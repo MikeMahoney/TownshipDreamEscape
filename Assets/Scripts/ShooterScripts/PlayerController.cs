@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Boundary
@@ -26,6 +27,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log(transform.position);
             nextFire = Time.time + fireRate;
             GameObject clone = Instantiate(shot, transform.position, shot.transform.rotation) as GameObject;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape) == true) {
+            SceneManager.LoadScene(1);
         }
     }
 
