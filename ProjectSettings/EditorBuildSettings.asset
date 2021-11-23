@@ -23,4 +23,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HullShooter.unity
     guid: 0aa9b82351bb43f46ba64eb895dd469f
+  - enabled: 1
+    path: Assets/Scenes/Hallway.unity
+    guid: 9faef84dbb82ea047b41ee67a13641c7
+  - enabled: 1
+    path: Assets/Scenes/Apartment.unity
+    guid: a2591149d3bcd0142ac440329fee4b9c
+  - enabled: 1
+    path: Assets/Scenes/FlowerShop.unity
+    guid: d160f91c964446b4d8e1f7a669988604
   m_configObjects: {}
