@@ -14,6 +14,17 @@ TagManager:
   - ShooterGate
   - MusicVenueGate
   - BackShooterGate
+  - LabGate
+  - RoofGate
+  - FlowerShopGate
+  - TownGate
+  - HallwayGate
+  - ApartmentGate
+  - LabToTownGate
+  - HallwayToTownGate
+  - ApartmentToHallwayGate
+  - CouchManTop
+  - TapeItem
   layers:
   - Default
   - TransparentFX

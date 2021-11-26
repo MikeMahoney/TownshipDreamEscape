@@ -8,7 +8,7 @@ public class OnClickInventory : MonoBehaviour
     [SerializeField] private GameObject inventory;
     [SerializeField] private string itemName;
 
-    public void OnClickCushion() {
+    public void OnClickDefaultItem() {
         if (PlayerPrefs.GetInt("ObjectiveMode") != 1) {
             StartCoroutine(showError());
         } else if (PlayerPrefs.GetString("CurrentObjective") == itemName) {

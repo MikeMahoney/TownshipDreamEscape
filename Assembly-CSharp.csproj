@@ -39,6 +39,7 @@
      <Compile Include="Assets\Scripts\SelectionManager.cs" />
      <Compile Include="Assets\Scripts\ShooterScripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\OnClickInventory.cs" />
+     <Compile Include="Assets\Scripts\HullShooterScripts\HeadCollider.cs" />
      <Compile Include="Assets\Scripts\ShooterScripts\Shield.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\GatewayInterface.cs" />
@@ -46,6 +47,7 @@
      <Compile Include="Assets\Scripts\DialogTrigger.cs" />
      <Compile Include="Assets\Scripts\DialogManager.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Scripts\HullShooterScripts\EnemyLogic.cs" />
      <Compile Include="Assets\Scripts\ShooterScripts\Barrier.cs" />
      <Compile Include="Assets\Scripts\Scenario.cs" />
      <Compile Include="Assets\Scripts\Dialog.cs" />
@@ -55,13 +57,12 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\LabMachine.cs" />
      <Compile Include="Assets\Scripts\ObjectiveSetItem.cs" />
+     <Compile Include="Assets\Scripts\HullShooterScripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\HullShooterScripts\HullShot.cs" />
      <Compile Include="Assets\Scripts\HullShooterScripts\HullGunController.cs" />
      <Compile Include="Assets\Scripts\Oscillator.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\HullShooterScripts\Enemy.cs" />
-     <Compile Include="Assets\Scripts\HullShooterScripts\EnemyLogic.cs" />
-     <Compile Include="Assets\Scripts\HullShooterScripts\HeadCollider.cs" />
+     <Compile Include="Assets\Scripts\Aerial.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

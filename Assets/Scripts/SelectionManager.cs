@@ -30,6 +30,7 @@ public class SelectionManager : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 2)) {
             var selection = hit.transform;
+            Debug.Log(hit.transform);
             if (selection.CompareTag(selectableTag)) {
                 var selectionRenderer = selection.GetComponent<Renderer>();
                 if (selectionRenderer != null) {
@@ -51,16 +52,12 @@ public class SelectionManager : MonoBehaviour
             }
         }
     }
-    
-    public void savePlayerPosition() {
-        PlayerPrefs.SetFloat("PosX", player.position.x);
-        PlayerPrefs.SetFloat("PosY", player.position.y);
-        PlayerPrefs.SetFloat("PosZ", player.position.z);
-    }
 
     public void saveInventoryItem(string itemName) {
         if(PlayerPrefs.GetInt(itemName) != 1) {
             PlayerPrefs.SetInt(itemName, 1);
+            // Set TAKEN so it doesn't reappear
+            PlayerPrefs.SetInt(itemName + "TAKEN", 2);
         }
     }
 }

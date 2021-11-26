@@ -1271,7 +1271,7 @@ GameObject:
   - component: {fileID: 462271469}
   m_Layer: 0
   m_Name: BuildingGateway
-  m_TagString: SceneSwitcher
+  m_TagString: LabToTownGate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1364,14 +1364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7ca4bb218905843ac119706e657007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: SceneSwitcher
+  selectableTag: LabToTownGate
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 3088a3978ee98d34a817d3658d770d77, type: 2}
   sceneIndex: 1
-  playerPosition:
-  - 0
-  - 0
-  - 0
   player: {fileID: 490225894}
 --- !u!1 &480617485
 GameObject:
@@ -1654,7 +1650,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490225891}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 10.7, y: 1.41, z: -11.97}
+  m_LocalPosition: {x: 10.7, y: 0.843, z: -11.97}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 1581360787}
@@ -2192,6 +2188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cushionUIItem: {fileID: 1613629612}
+  tapeUIItem: {fileID: 0}
 --- !u!1 &913475992
 GameObject:
   m_ObjectHideFlags: 0
@@ -4639,8 +4636,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1613629617}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnClickCushion
+        m_TargetAssemblyTypeName: OnClickInventory, Assembly-CSharp
+        m_MethodName: OnClickDefaultItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4988,7 +4985,7 @@ GameObject:
   - component: {fileID: 1725091774}
   m_Layer: 0
   m_Name: CeilingGateway
-  m_TagString: SceneSwitcher
+  m_TagString: RoofGate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5019,14 +5016,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7ca4bb218905843ac119706e657007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: SceneSwitcher
+  selectableTag: RoofGate
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 3088a3978ee98d34a817d3658d770d77, type: 2}
   sceneIndex: 1
-  playerPosition:
-  - -4
-  - 11
-  - -16
   player: {fileID: 490225894}
 --- !u!65 &1725091775
 BoxCollider:

@@ -7,7 +7,7 @@ public class InventoryItem : MonoBehaviour
 {
     void Update()
     {
-       if(PlayerPrefs.GetInt(gameObject.tag) == 1){
+       if(PlayerPrefs.GetInt(gameObject.tag) == 1 || PlayerPrefs.GetInt(gameObject.tag + "TAKEN") == 2){
            gameObject.SetActive(false);
        }
     }

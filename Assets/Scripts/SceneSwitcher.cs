@@ -9,7 +9,6 @@ public class SceneSwitcher : MonoBehaviour
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private int sceneIndex;
-    [SerializeField] private float[] playerPosition = new float[3];
 
     private Transform _selection;
     public Transform player;
@@ -34,18 +33,11 @@ public class SceneSwitcher : MonoBehaviour
                 _selection = selection;
                 if (Input.GetMouseButtonDown(0)) {
                     if(sceneIndex == 1) {
-                        Debug.Log(playerPosition[0]);
-                        if (playerPosition[0] != 0) {
-                            saveCustomPlayerPosition();
-                        }
+                        saveCustomPlayerPosition();
                         SceneManager.LoadScene(sceneIndex);
                     } else {
-                        Debug.Log(sceneIndex);
-                        if (playerPosition[0] != 0) {
-                            saveCustomPlayerPosition();
-                        } else {
-                            savePlayerPosition();
-                        }
+                        saveCustomPlayerPosition();
+                        savePlayerPosition();
                         SceneManager.LoadScene(sceneIndex);
                     }
                 }
@@ -60,8 +52,22 @@ public class SceneSwitcher : MonoBehaviour
     }
 
     public void saveCustomPlayerPosition() {
-        PlayerPrefs.SetFloat("PosX", playerPosition[0]);
-        PlayerPrefs.SetFloat("PosY", playerPosition[1]);
-        PlayerPrefs.SetFloat("PosZ", playerPosition[2]);
+        if (selectableTag == "RoofGate") {
+            PlayerPrefs.SetFloat("PosX", -4);
+            PlayerPrefs.SetFloat("PosY", 11);
+            PlayerPrefs.SetFloat("PosZ", -16);
+        } else if (selectableTag == "LabToTownGate") {
+            PlayerPrefs.SetFloat("PosX", -4);
+            PlayerPrefs.SetFloat("PosY", 6.8f);
+            PlayerPrefs.SetFloat("PosZ", -20);
+        } else if (selectableTag == "HallwayToTownGate") {
+            PlayerPrefs.SetFloat("PosX", 5.7f);
+            PlayerPrefs.SetFloat("PosY", 4.5f);
+            PlayerPrefs.SetFloat("PosZ", -28);
+        } else if (selectableTag == "ApartmentToHallwayGate") {
+            PlayerPrefs.SetFloat("PosX", 3.9f);
+            PlayerPrefs.SetFloat("PosY", 5.5f);
+            PlayerPrefs.SetFloat("PosZ", -8.5f);
+        }
     }
 }
