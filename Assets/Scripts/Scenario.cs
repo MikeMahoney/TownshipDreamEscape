@@ -11,8 +11,6 @@ public class Scenario : MonoBehaviour
     [SerializeField] private string scenarioName;
     void Update()
     {
-        Debug.Log(PlayerPrefs.HasKey(scenarioId));
-        Debug.Log(PlayerPrefs.GetString(scenarioId));
         if (PlayerPrefs.HasKey(scenarioId)) {
             scenarioTitle.GetComponent<Text>().text = scenarioName;
         } else {

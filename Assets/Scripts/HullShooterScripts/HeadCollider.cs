@@ -9,7 +9,15 @@ public class HeadCollider : MonoBehaviour
         Debug.Log("COLLIDED");
         if(collider.gameObject.tag == "Shot")
         {
-            Debug.Log("ENEMY HIT!");
+            Debug.Log(gameObject.transform.parent.gameObject.name);
+            int currentMoney = PlayerPrefs.GetInt("Money");
+
+            if (gameObject.transform.parent.gameObject.name == "EnemyBasic(Clone)") {
+                PlayerPrefs.SetInt("Money", currentMoney+5);
+            } else if(gameObject.transform.parent.gameObject.name == "EnemySpecial(Clone)") {
+                PlayerPrefs.SetInt("Money", currentMoney+10);
+            }
+
             Destroy(gameObject.transform.parent.gameObject);
             Destroy(collider.gameObject);
         }

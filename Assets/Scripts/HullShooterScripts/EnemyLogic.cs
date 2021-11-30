@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyLogic : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class EnemyLogic : MonoBehaviour
             enemyCount -= 1;
         } else {
             CancelInvoke();
+            SceneManager.LoadScene(1);
         }
     }
 }

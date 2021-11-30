@@ -36,15 +36,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ShopItem.cs" />
      <Compile Include="Assets\Scripts\SelectionManager.cs" />
      <Compile Include="Assets\Scripts\ShooterScripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\OnClickInventory.cs" />
      <Compile Include="Assets\Scripts\HullShooterScripts\HeadCollider.cs" />
+     <Compile Include="Assets\Scripts\InventoryUIItem.cs" />
      <Compile Include="Assets\Scripts\ShooterScripts\Shield.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\GatewayInterface.cs" />
      <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
      <Compile Include="Assets\Scripts\DialogTrigger.cs" />
+     <Compile Include="Assets\Scripts\ShopOwner.cs" />
      <Compile Include="Assets\Scripts\DialogManager.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\HullShooterScripts\EnemyLogic.cs" />
@@ -55,14 +58,18 @@
      <Compile Include="Assets\Scripts\ObjectiveMarker.cs" />
      <Compile Include="Assets\Scripts\InventoryItem.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\ShopMenu.cs" />
+     <Compile Include="Assets\Scripts\Money.cs" />
      <Compile Include="Assets\Scripts\LabMachine.cs" />
      <Compile Include="Assets\Scripts\ObjectiveSetItem.cs" />
      <Compile Include="Assets\Scripts\HullShooterScripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\HullShooterScripts\HullShot.cs" />
      <Compile Include="Assets\Scripts\HullShooterScripts\HullGunController.cs" />
+     <Compile Include="Assets\Scripts\Aerial.cs" />
      <Compile Include="Assets\Scripts\Oscillator.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\Aerial.cs" />
+     <Compile Include="Assets\Scripts\DrinkTray.cs" />
+     <Compile Include="Assets\Scripts\Sprinkler.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

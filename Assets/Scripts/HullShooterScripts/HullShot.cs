@@ -13,7 +13,6 @@ public class HullShot : MonoBehaviour
 
     void Update ()
     {
-        Debug.Log(transform.position.y);
         transform.position = new Vector3 (
             transform.position.x + speed,
             transform.position.y,

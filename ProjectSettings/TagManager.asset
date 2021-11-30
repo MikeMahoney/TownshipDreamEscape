@@ -25,6 +25,9 @@ TagManager:
   - ApartmentToHallwayGate
   - CouchManTop
   - TapeItem
+  - FlowerShopOwner
+  - WaterWorksGate
+  - WaterManTop
   layers:
   - Default
   - TransparentFX

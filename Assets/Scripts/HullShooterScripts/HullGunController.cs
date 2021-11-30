@@ -23,10 +23,6 @@ public class HullGunController : MonoBehaviour
             shot.transform.eulerAngles = new Vector3 (90f, yValue, 0.0f);
             GameObject clone = Instantiate(shot, transform.position, shot.transform.rotation) as GameObject;
         }
-
-        if(Input.GetKeyDown(KeyCode.Escape) == true) {
-            SceneManager.LoadScene(1);
-        }
     }
 
     void FixedUpdate ()

@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
     void UICheck() {
          if (Input.GetKeyDown(KeyCode.Q) && !Input.GetKeyDown(KeyCode.E)) {
-            if(inventory.active){
+            if(inventory.activeSelf){
                 PlayerPrefs.SetInt("ObjectiveMode", 0);
                 PlayerPrefs.SetString("CurrentObjective", "");
                 inventory.SetActive(false);
@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
             }
          }
          if (Input.GetKeyDown(KeyCode.E) && !Input.GetKeyDown(KeyCode.Q)) {
-            if(scenarios.active){
+            if(scenarios.activeSelf){
                 PlayerPrefs.SetInt("ObjectiveMode", 0);
                 PlayerPrefs.SetString("CurrentObjective", "");
                 itemError.SetActive(false);

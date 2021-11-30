@@ -9,7 +9,7 @@ public class OnClickInventory : MonoBehaviour
     [SerializeField] private string itemName;
 
     public void OnClickDefaultItem() {
-        if (PlayerPrefs.GetInt("ObjectiveMode") != 1) {
+        if (PlayerPrefs.GetInt("ObjectiveMode") != 1 || PlayerPrefs.GetString("CurrentObjective") != itemName) {
             StartCoroutine(showError());
         } else if (PlayerPrefs.GetString("CurrentObjective") == itemName) {
             PlayerPrefs.SetString(itemName, "SET");
