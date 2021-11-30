@@ -28,6 +28,7 @@ TagManager:
   - FlowerShopOwner
   - WaterWorksGate
   - WaterManTop
+  - ObjectiveTwo
   layers:
   - Default
   - TransparentFX

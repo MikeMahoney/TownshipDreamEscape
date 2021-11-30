@@ -30,6 +30,7 @@ public class SelectionManager : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 2)) {
             var selection = hit.transform;
+            Debug.Log(selection.tag);
             if (selection.CompareTag(selectableTag)) {
                 var selectionRenderer = selection.GetComponent<Renderer>();
                 if (selectionRenderer != null) {
