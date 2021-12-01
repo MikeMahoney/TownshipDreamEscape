@@ -23,7 +23,6 @@ public class DialogManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         messages.Clear();
 
-        Debug.Log(status);
         string[] currentMessages = dialog.messages;
         if (status == "SUCCESS") {
             currentMessages = dialog.successMessages;

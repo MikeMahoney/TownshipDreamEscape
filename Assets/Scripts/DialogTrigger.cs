@@ -14,7 +14,6 @@ public class DialogTrigger : MonoBehaviour
         } else {
             scenarioStatus = PlayerPrefs.GetString(scenarioId);
         }
-        Debug.Log(scenarioStatus);
         FindObjectOfType<DialogManager>().StartDialog(dialog, scenarioStatus);
     }
 }

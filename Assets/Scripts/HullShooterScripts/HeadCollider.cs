@@ -6,10 +6,8 @@ public class HeadCollider : MonoBehaviour
 {
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("COLLIDED");
         if(collider.gameObject.tag == "Shot")
         {
-            Debug.Log(gameObject.transform.parent.gameObject.name);
             int currentMoney = PlayerPrefs.GetInt("Money");
 
             if (gameObject.transform.parent.gameObject.name == "EnemyBasic(Clone)") {

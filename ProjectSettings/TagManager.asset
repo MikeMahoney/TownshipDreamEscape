@@ -29,6 +29,11 @@ TagManager:
   - WaterWorksGate
   - WaterManTop
   - ObjectiveTwo
+  - HomelessCatTop
+  - ObjectiveThree
+  - FlowerBloomItem
+  - PlantedFlower
+  - FlowerBloomSetItem
   layers:
   - Default
   - TransparentFX

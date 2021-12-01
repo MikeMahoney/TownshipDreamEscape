@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject cushionUIItem;
     [SerializeField] private GameObject tapeUIItem;
     [SerializeField] private GameObject seedsShopItem;
+    [SerializeField] private GameObject flowerBloomUIItem;
     [SerializeField] private GameObject mojitoShopItem;
     [SerializeField] private GameObject margaritaShopItem;
     [SerializeField] private GameObject oldFashionedShopItem;
@@ -23,6 +24,10 @@ public class Inventory : MonoBehaviour
         }
         if(PlayerPrefs.GetInt("SeedsShopItem") == 1){
             seedsShopItem.SetActive(true);
+        }
+
+        if(PlayerPrefs.GetInt("FlowerBloomItem") == 1){
+            flowerBloomUIItem.SetActive(true);
         }
 
         if(PlayerPrefs.GetInt("MojitoShopItem") == 1){

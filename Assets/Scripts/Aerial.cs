@@ -5,7 +5,7 @@ using UnityEngine;
 public class Aerial : MonoBehaviour
 {
     void Update() {
-        if(PlayerPrefs.GetString("TapeItem") == "SET" && PlayerPrefs.GetString("TapeItem") != "SUCCESS"){
+        if(PlayerPrefs.GetString("TapeItem") == "SET" && PlayerPrefs.GetString("GUNMAN") != "SUCCESS"){
             PlayerPrefs.SetString("GUNMAN", "SUCCESS");
         }
     }
