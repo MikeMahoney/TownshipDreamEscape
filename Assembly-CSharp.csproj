@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\GatewayInterface.cs" />
      <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
      <Compile Include="Assets\Scripts\Garden.cs" />
+     <Compile Include="Assets\Scripts\HomelessKat.cs" />
      <Compile Include="Assets\Scripts\DialogTrigger.cs" />
      <Compile Include="Assets\Scripts\ShopOwner.cs" />
      <Compile Include="Assets\Scripts\DialogManager.cs" />
@@ -71,7 +72,8 @@
      <Compile Include="Assets\Scripts\Aerial.cs" />
      <Compile Include="Assets\Scripts\Oscillator.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\HomelessKat.cs" />
+     <Compile Include="Assets\Scripts\SprinklerControl.cs" />
+     <Compile Include="Assets\Scripts\BandWoman.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

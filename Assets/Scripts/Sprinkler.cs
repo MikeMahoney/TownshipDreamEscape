@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class Sprinkler : MonoBehaviour
 {
-    void Start() {
-        if(PlayerPrefs.GetString("WATERMAN") == "SUCCESS" && !gameObject.GetComponent<ParticleSystem>().isPlaying){
+    void Update() {
+        if(
+            PlayerPrefs.GetString("SPRINKLER") == "ACTIVE" &&
+            !gameObject.GetComponent<ParticleSystem>().isPlaying
+        ){
             gameObject.GetComponent<ParticleSystem>().Play();
+        } else if(
+            PlayerPrefs.GetString("SPRINKLER") == "INACTIVE" &&
+            gameObject.GetComponent<ParticleSystem>().isPlaying
+        ) {
+            gameObject.GetComponent<ParticleSystem>().Stop();
         }
     }
 }
