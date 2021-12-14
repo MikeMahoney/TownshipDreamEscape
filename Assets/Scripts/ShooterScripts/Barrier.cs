@@ -11,10 +11,12 @@ public class Barrier : MonoBehaviour
             Debug.Log("BARRIER HIT!");
             Destroy(collider.gameObject);
         }
+
+        if(collider.gameObject.tag == "SoundBlast")
+        {
+            Debug.Log("SOUNDBLAST HIT!");
+            PlayerPrefs.SetString("BarrierState", "DESTROYED");
+            gameObject.SetActive(false);
+        }
     }
- 
-    // void OnTriggerExit(Collider collider)
-    // {
-        
-    // }
 }

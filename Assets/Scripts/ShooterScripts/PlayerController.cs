@@ -37,13 +37,18 @@ public class PlayerController : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis ("Horizontal");
         float moveVertical = Input.GetAxis ("Vertical");
+        float boundaryMax = boundary.xMax;
+
+        if(PlayerPrefs.GetString("BarrierState") == "DESTROYED"){
+            boundaryMax = 40;
+        }
 
         Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
         GetComponent<Rigidbody>().velocity = movement * speed;
 
         GetComponent<Rigidbody>().position = new Vector3 
         (
-            Mathf.Clamp (GetComponent<Rigidbody>().position.x, boundary.xMin, boundary.xMax), 
+            Mathf.Clamp (GetComponent<Rigidbody>().position.x, boundary.xMin, boundaryMax), 
             0.0f, 
             Mathf.Clamp (GetComponent<Rigidbody>().position.z, boundary.zMin, boundary.zMax)
         );

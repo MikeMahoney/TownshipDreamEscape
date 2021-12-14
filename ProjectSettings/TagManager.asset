@@ -39,6 +39,7 @@ TagManager:
   - InvitationItem
   - InvitationSetItem
   - ObjectiveFour
+  - SoundBlast
   layers:
   - Default
   - TransparentFX
