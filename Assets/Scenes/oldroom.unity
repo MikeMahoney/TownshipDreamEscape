@@ -1674,6 +1674,8 @@ MonoBehaviour:
   selectableTag: LabToTownGate
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 3088a3978ee98d34a817d3658d770d77, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   sceneIndex: 1
   player: {fileID: 490225894}
 --- !u!1 &480617485
@@ -1793,6 +1795,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: 2ddbfbeb40a49f64fa02dd7bfe27a7f4, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 78b0f8f79ecb00548a7e47624e87ba13, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 490225894}
   callback:
     m_PersistentCalls:
@@ -1812,6 +1816,7 @@ MonoBehaviour:
   connectedItem: CushionItem
   scenarioId: LABMAN
   setModel: {fileID: 161573476}
+  disabledScenarioId: 
 --- !u!1 &490172270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2324,6 +2329,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: fddbfc878343e9743866946916925084, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 490225894}
   callback:
     m_PersistentCalls:
@@ -2368,6 +2375,7 @@ MonoBehaviour:
     failedMessages:
     - '* Dead person noises... *'
   scenarioId: LABMAN
+  itemName: 
 --- !u!1 &712006404
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,6 +4427,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: fddbfc878343e9743866946916925084, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 490225894}
   callback:
     m_PersistentCalls:
@@ -4462,6 +4472,7 @@ MonoBehaviour:
       Thanks for the assist, but it probably wasn''t necessary.'
     failedMessages: []
   scenarioId: LABMAN
+  itemName: 
 --- !u!64 &1379115128
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4740,6 +4751,7 @@ MonoBehaviour:
   scenarioStatus: {fileID: 2117722383}
   scenarioId: LABMAN
   scenarioName: Labman's Gambit
+  itemName: 
 --- !u!850595691 &1571854771
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -5250,6 +5262,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: f32bd887e7279724ca81f0a2231d982a, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 1b5bceee84bf9854f8282e928696b209, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 490225894}
   callback:
     m_PersistentCalls:
@@ -5315,6 +5329,8 @@ MonoBehaviour:
   selectableTag: RoofGate
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 3088a3978ee98d34a817d3658d770d77, type: 2}
+  disabledMaterial: {fileID: 2100000, guid: 53674037713a30b46adf30166a0b22e9, type: 2}
+  disabledPref: LABMAN
   sceneIndex: 1
   player: {fileID: 490225894}
 --- !u!65 &1725091775
@@ -7408,6 +7424,11 @@ MonoBehaviour:
   cushionUIItem: {fileID: 1877791710}
   tapeUIItem: {fileID: 2264462}
   seedsShopItem: {fileID: 490172270}
+  flowerBloomUIItem: {fileID: 0}
+  invitationUIItem: {fileID: 0}
+  mojitoShopItem: {fileID: 0}
+  margaritaShopItem: {fileID: 0}
+  oldFashionedShopItem: {fileID: 0}
 --- !u!114 &2006040437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7732,6 +7753,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: 3088a3978ee98d34a817d3658d770d77, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 1b5bceee84bf9854f8282e928696b209, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 490225894}
   callback:
     m_PersistentCalls:
@@ -7801,6 +7824,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: f32bd887e7279724ca81f0a2231d982a, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 1b5bceee84bf9854f8282e928696b209, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 490225894}
   callback:
     m_PersistentCalls:

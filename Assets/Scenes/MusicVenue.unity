@@ -618,6 +618,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: fddbfc878343e9743866946916925084, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 0}
   callback:
     m_PersistentCalls:
@@ -952,6 +954,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: abbc3e20bd2696640ac63f7a10b22f62, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 0}
   callback:
     m_PersistentCalls:
@@ -993,7 +997,12 @@ MonoBehaviour:
 
 
       THERE''S A FORMAL INVITAION ON THE
-      COUNTER OVER THERE"'
+      COUNTER OVER THERE!'
+    - 'I NEED SOMEONE BEFORE 7 O''CLOCK.
+
+
+      OTHERWISE THE SHOW WON''T GO AHEAD
+      AND MY HEART WILL BREAK!'
     successMessages:
     - 'YES! NOW I''M FEELING IT!
 
@@ -1002,8 +1011,27 @@ MonoBehaviour:
 
 
       IT BREAKS ALL BARRIERS!'
-    failedMessages: []
+    failedMessages:
+    - 'IT''S TOO LATE!
+
+      IT''S TOO LATE!'
+    - '
+
+      HENWEN FORGIVE ME!!!'
   scenarioId: BANDWOMAN
+  itemName: 
+--- !u!114 &183899417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183899414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a41044652c1b58428f427ae92856d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &183899419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1052,6 +1080,8 @@ MonoBehaviour:
   selectableTag: SceneSwitcher
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 3088a3978ee98d34a817d3658d770d77, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   sceneIndex: 1
   player: {fileID: 808808988}
 --- !u!65 &186411529
@@ -1700,6 +1730,7 @@ MonoBehaviour:
   scenarioStatus: {fileID: 1166853572}
   scenarioId: LABMAN
   scenarioName: Labman's Gambit
+  itemName: 
 --- !u!114 &362363590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5815,6 +5846,7 @@ MonoBehaviour:
   scenarioStatus: {fileID: 1772297613}
   scenarioId: WATERMAN
   scenarioName: Thirsty Pirate Piper
+  itemName: 
 --- !u!114 &1211490251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5988,6 +6020,7 @@ MonoBehaviour:
   scenarioStatus: {fileID: 2001963227}
   scenarioId: GUNMAN
   scenarioName: Tom Love's Telly
+  itemName: 
 --- !u!114 &1226707265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7875,6 +7908,7 @@ MonoBehaviour:
   scenarioStatus: {fileID: 1550565837}
   scenarioId: BANDWOMAN
   scenarioName: Kit's Hardstyle Offensive
+  itemName: 
 --- !u!114 &1853632548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7969,6 +8003,7 @@ MonoBehaviour:
   scenarioStatus: {fileID: 851784664}
   scenarioId: HOMELESSCAT
   scenarioName: Kat Praises Henwen
+  itemName: 
 --- !u!114 &1885415454
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,14 +16,27 @@ public class PlayerController : MonoBehaviour
     public Boundary boundary;
 
     public GameObject shot;
+    public GameObject soundBlast;
     public float fireRate;
 
     private float nextFire;
 
+    void Start ()
+    {
+       if (
+            PlayerPrefs.GetString("BANDWOMAN") == "SUCCESS"
+        ){
+            soundBlast.SetActive(true);
+        }
+    }
+
     void Update ()
     {
-        if (Input.GetButton("Fire1") && Time.time > nextFire)
-        {
+        if (
+            PlayerPrefs.GetString("GUNMAN") == "SUCCESS" &&
+            Input.GetButton("Fire1") &&
+            Time.time > nextFire
+        ){
             nextFire = Time.time + fireRate;
             GameObject clone = Instantiate(shot, transform.position, shot.transform.rotation) as GameObject;
         }

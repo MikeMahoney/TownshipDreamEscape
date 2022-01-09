@@ -9,6 +9,7 @@ public class Scenario : MonoBehaviour
     [SerializeField] public GameObject scenarioStatus;
     [SerializeField] private string scenarioId;
     [SerializeField] private string scenarioName;
+    [SerializeField] private string itemName;
     void Update()
     {
         if (PlayerPrefs.HasKey(scenarioId)) {
@@ -19,7 +20,7 @@ public class Scenario : MonoBehaviour
 
         if (!PlayerPrefs.HasKey(scenarioId)) {
             scenarioStatus.GetComponent<Text>().text = "";
-        } else if (PlayerPrefs.GetString(scenarioId) == "SUCCESS") {
+        } else if (PlayerPrefs.GetString(scenarioId) == "SUCCESS" || PlayerPrefs.GetString(itemName) == "SET") {
             scenarioStatus.GetComponent<Text>().text = "Complete";
         } else if (PlayerPrefs.GetString(scenarioId) == "FAILED") {
             scenarioStatus.GetComponent<Text>().text = "Failed";

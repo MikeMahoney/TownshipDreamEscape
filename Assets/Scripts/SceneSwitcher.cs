@@ -8,6 +8,8 @@ public class SceneSwitcher : MonoBehaviour
     [SerializeField] private string selectableTag = "SceneSwitcher";
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
+    [SerializeField] private Material disabledMaterial;
+    [SerializeField] private string disabledPref;
     [SerializeField] private int sceneIndex;
 
     private Transform _selection;
@@ -15,30 +17,33 @@ public class SceneSwitcher : MonoBehaviour
 
     void Update()
     {
-        if (_selection != null) {
-            var selectionRenderer = _selection.GetComponent<Renderer>();
-            selectionRenderer.material = defaultMaterial;
-            _selection = null;
-        }
+        if(!string.IsNullOrEmpty(disabledPref) && PlayerPrefs.GetString(disabledPref) != "SUCCESS"){
+            this.GetComponent<Renderer>().material = disabledMaterial;
+        } else {
+            if (_selection != null) {
+                var selectionRenderer = _selection.GetComponent<Renderer>();
+                selectionRenderer.material = defaultMaterial;
+                _selection = null;
+            }
 
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 1)) {
-            var selection = hit.transform;
-            if (selection.CompareTag(selectableTag)) {
-                var selectionRenderer = selection.GetComponent<Renderer>();
-                if (selectionRenderer != null) {
-                    selectionRenderer.material = highlightMaterial;
-                }
-                _selection = selection;
-                if (Input.GetMouseButtonDown(0)) {
-                    if(sceneIndex == 1) {
-                        saveCustomPlayerPosition();
-                        SceneManager.LoadScene(sceneIndex);
-                    } else {
-                        saveCustomPlayerPosition();
-                        savePlayerPosition();
-                        SceneManager.LoadScene(sceneIndex);
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 1)) {
+                var selection = hit.transform;
+                if (selection.CompareTag(selectableTag)) {
+                    var selectionRenderer = selection.GetComponent<Renderer>();
+                    if (selectionRenderer != null) {
+                        selectionRenderer.material = highlightMaterial;
+                    }
+                    _selection = selection;
+                    if (Input.GetMouseButtonDown(0)) {
+                        if(sceneIndex == 1 || sceneIndex == 6) {
+                            saveCustomPlayerPosition();
+                            SceneManager.LoadScene(sceneIndex);
+                        } else {
+                            savePlayerPosition();
+                            SceneManager.LoadScene(sceneIndex);
+                        }
                     }
                 }
             }
@@ -52,6 +57,7 @@ public class SceneSwitcher : MonoBehaviour
     }
 
     public void saveCustomPlayerPosition() {
+        Debug.Log(selectableTag);
         if (selectableTag == "RoofGate") {
             PlayerPrefs.SetFloat("PosX", -4);
             PlayerPrefs.SetFloat("PosY", 11);

@@ -2018,6 +2018,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: fddbfc878343e9743866946916925084, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 1093779009}
   callback:
     m_PersistentCalls:
@@ -2049,7 +2051,7 @@ MonoBehaviour:
   dialog:
     name: Tom Gun Bruise
     messages:
-    - Damn this television. The durty damn thang.
+    - "Damn this television. \nThe durty damn thang."
     - 'Could you please fix the aerial on the roof for me?
 
       There is tape you
@@ -2060,8 +2062,10 @@ MonoBehaviour:
 
       I can finally find out if
       these Meerkats make it through the Summer.'
+    - The Township guns should be ready to use in an hour.
     failedMessages: []
   scenarioId: GUNMAN
+  itemName: TapeItem
 --- !u!64 &569896038
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2205,6 +2209,11 @@ MonoBehaviour:
   cushionUIItem: {fileID: 846496177}
   tapeUIItem: {fileID: 4094019}
   seedsShopItem: {fileID: 865184380}
+  flowerBloomUIItem: {fileID: 0}
+  invitationUIItem: {fileID: 0}
+  mojitoShopItem: {fileID: 0}
+  margaritaShopItem: {fileID: 0}
+  oldFashionedShopItem: {fileID: 0}
 --- !u!114 &586914575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4031,6 +4040,8 @@ MonoBehaviour:
   selectableTag: ApartmentToHallwayGate
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 3088a3978ee98d34a817d3658d770d77, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   sceneIndex: 6
   player: {fileID: 1093779009}
 --- !u!65 &1275003745
@@ -4224,6 +4235,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: f32bd887e7279724ca81f0a2231d982a, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 311cc4f37c6c24f48bbe01e3c7fa51d9, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 1093779009}
   callback:
     m_PersistentCalls:
@@ -4363,6 +4376,7 @@ MonoBehaviour:
   scenarioStatus: {fileID: 750439317}
   scenarioId: LABMAN
   scenarioName: Labman's Gambit
+  itemName: 
 --- !u!114 &1334407964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4789,6 +4803,7 @@ MonoBehaviour:
   scenarioStatus: {fileID: 115547055}
   scenarioId: GUNMAN
   scenarioName: Tom Love's Telly
+  itemName: 
 --- !u!114 &1696613253
 MonoBehaviour:
   m_ObjectHideFlags: 0

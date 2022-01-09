@@ -26,9 +26,14 @@ public class PlayerMovement : MonoBehaviour
     bool isGrounded;
 
     void Start() {
-        if(SceneManager.GetActiveScene().buildIndex == 1 && PlayerPrefs.HasKey("PosX")) {
+        Debug.Log(PlayerPrefs.GetFloat("PosX"));
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
+        if(
+            (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 6) &&
+            PlayerPrefs.HasKey("PosX")
+        ) {
             Vector3 position = Vector3.zero;
-
+            Debug.Log(PlayerPrefs.GetFloat("PosX"));
             position.x = PlayerPrefs.GetFloat("PosX");
             position.y = PlayerPrefs.GetFloat("PosY");
             position.z = PlayerPrefs.GetFloat("PosZ");

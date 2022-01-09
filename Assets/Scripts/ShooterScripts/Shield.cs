@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
+    public int health;
     void OnTriggerEnter(Collider collider)
     {
         Debug.Log("ON ENTER!");
         if(collider.gameObject.tag == "Shot")
         {
-            Debug.Log("SHIELD HIT!");
+            Destroy(collider.gameObject);
+            health -= 1;
+            if (health == 0) {
+                destroyShield();
+            }
         }
     }
  
-    // void OnTriggerExit(Collider collider)
-    // {
-        
-    // }
+    public void destroyShield()
+    {
+        gameObject.SetActive(false);
+        PlayerPrefs.SetInt("SHIELD_COUNT", PlayerPrefs.GetInt("SHIELD_COUNT") - 1);
+    }
 }

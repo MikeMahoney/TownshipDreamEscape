@@ -6,8 +6,12 @@ public class Garden : MonoBehaviour
 {
     [SerializeField] public GameObject plantedSeed;
     [SerializeField] public GameObject plantedFlower;
-    void Update() {
-        if(PlayerPrefs.GetString("SPRINKLER") == "ACTIVE" && !plantedFlower.activeSelf){
+    void Start() {
+        if(
+            PlayerPrefs.GetString("SPRINKLER") == "ACTIVE" &&
+            PlayerPrefs.GetString("SeedsShopItem") == "SET" &&
+            PlayerPrefs.GetString("FlowerItem") == "SET"
+        ){
             plantedFlower.SetActive(true);
             plantedSeed.SetActive(false);
         }

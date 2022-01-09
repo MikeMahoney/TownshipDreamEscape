@@ -667,8 +667,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedItem: MojitoShopItem
-  scenarioId: WATERMAN
+  scenarioId: 
   setModel: {fileID: 485493287}
+  disabledScenarioId: 
 --- !u!136 &200027332
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -751,6 +752,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: 2ddbfbeb40a49f64fa02dd7bfe27a7f4, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 78b0f8f79ecb00548a7e47624e87ba13, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 659228828}
   callback:
     m_PersistentCalls:
@@ -890,6 +893,7 @@ MonoBehaviour:
   scenarioStatus: {fileID: 1308892870}
   scenarioId: WATERMAN
   scenarioName: Thirsty Pirate Piper
+  itemName: MojitoShopItem
 --- !u!114 &217031695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,7 +1238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0313dfd990b285439ab883940aad7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemError: {fileID: 0}
+  itemError: {fileID: 488736113}
   inventory: {fileID: 2067934940}
   itemName: CushionItem
 --- !u!114 &333695619
@@ -2063,7 +2067,7 @@ RectTransform:
   m_Children:
   - {fileID: 1124518427}
   m_Father: {fileID: 710137750}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2309,7 +2313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0313dfd990b285439ab883940aad7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemError: {fileID: 0}
+  itemError: {fileID: 488736113}
   inventory: {fileID: 2067934940}
   itemName: MojitoShopItem
 --- !u!114 &538155408
@@ -3200,10 +3204,10 @@ RectTransform:
   - {fileID: 1231916442}
   - {fileID: 1359753300}
   - {fileID: 413153512}
-  - {fileID: 488736114}
   - {fileID: 1199100691}
   - {fileID: 1733757018}
   - {fileID: 2067934941}
+  - {fileID: 488736114}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3438,7 +3442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0313dfd990b285439ab883940aad7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemError: {fileID: 0}
+  itemError: {fileID: 488736113}
   inventory: {fileID: 2067934940}
   itemName: TapeItem
 --- !u!114 &777473839
@@ -3587,7 +3591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0313dfd990b285439ab883940aad7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemError: {fileID: 0}
+  itemError: {fileID: 488736113}
   inventory: {fileID: 2067934940}
   itemName: SeedsShopItem
 --- !u!114 &795892639
@@ -3733,6 +3737,8 @@ MonoBehaviour:
   selectableTag: TownGate
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 3088a3978ee98d34a817d3658d770d77, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   sceneIndex: 1
   player: {fileID: 659228828}
 --- !u!65 &834047174
@@ -4345,7 +4351,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007145347}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64dfbebd44ab98d4ea770810f085f780, type: 3}
   m_Name: 
@@ -4472,6 +4478,7 @@ MonoBehaviour:
   scenarioStatus: {fileID: 865863670}
   scenarioId: GUNMAN
   scenarioName: Tom Love's Telly
+  itemName: 
 --- !u!114 &1015947156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5101,6 +5108,7 @@ MonoBehaviour:
 
       Not piratey enough I''m afraid, harr.'
   scenarioId: WATERMAN
+  itemName: MojitoShopItem
 --- !u!114 &1041333819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5120,6 +5128,8 @@ MonoBehaviour:
   objectiveItem: 0
   highlightMaterial: {fileID: 2100000, guid: 5e4654432c395684faa676eb225d038f, type: 2}
   defaultMaterial: {fileID: 2100000, guid: fddbfc878343e9743866946916925084, type: 2}
+  disabledMaterial: {fileID: 0}
+  disabledPref: 
   player: {fileID: 659228828}
   callback:
     m_PersistentCalls:
@@ -5281,7 +5291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0313dfd990b285439ab883940aad7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemError: {fileID: 0}
+  itemError: {fileID: 488736113}
   inventory: {fileID: 2067934940}
   itemName: MargaritaShopItem
 --- !u!114 &1133961581
@@ -5588,7 +5598,7 @@ RectTransform:
   - {fileID: 159275400}
   - {fileID: 1624871789}
   m_Father: {fileID: 710137750}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6796,7 +6806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0313dfd990b285439ab883940aad7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemError: {fileID: 0}
+  itemError: {fileID: 488736113}
   inventory: {fileID: 2067934940}
   itemName: OldFashionedShopItem
 --- !u!114 &1579804330
@@ -7082,7 +7092,7 @@ RectTransform:
   m_Children:
   - {fileID: 646250588}
   m_Father: {fileID: 710137750}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7388,6 +7398,7 @@ MonoBehaviour:
   scenarioStatus: {fileID: 1733815490}
   scenarioId: LABMAN
   scenarioName: Labman's Gambit
+  itemName: 
 --- !u!114 &1888520858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7760,7 +7771,7 @@ RectTransform:
   - {fileID: 434988538}
   - {fileID: 1562151146}
   m_Father: {fileID: 710137750}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7782,6 +7793,8 @@ MonoBehaviour:
   cushionUIItem: {fileID: 333695616}
   tapeUIItem: {fileID: 777473836}
   seedsShopItem: {fileID: 795892636}
+  flowerBloomUIItem: {fileID: 0}
+  invitationUIItem: {fileID: 0}
   mojitoShopItem: {fileID: 538155405}
   margaritaShopItem: {fileID: 1133961578}
   oldFashionedShopItem: {fileID: 1579804327}

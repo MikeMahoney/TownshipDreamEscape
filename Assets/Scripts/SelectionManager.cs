@@ -13,6 +13,8 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private bool objectiveItem;
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
+    [SerializeField] private Material disabledMaterial;
+    [SerializeField] private string disabledPref;
     private Transform _selection;
     public Transform player;
 
@@ -20,33 +22,43 @@ public class SelectionManager : MonoBehaviour
 
     void Update()
     {
-        if (_selection != null) {
-            var selectionRenderer = _selection.GetComponent<Renderer>();
-            selectionRenderer.material = defaultMaterial;
-            _selection = null;
-        }
-
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 2)) {
-            var selection = hit.transform;
-            if (selection.CompareTag(selectableTag)) {
-                var selectionRenderer = selection.GetComponent<Renderer>();
-                if (selectionRenderer != null) {
-                    selectionRenderer.material = highlightMaterial;
+        if(
+            GameObject.Find("Dialog") == null &&
+            GameObject.Find("Scenarios") == null &&
+            GameObject.Find("Inventory") == null
+        ){
+            if(!string.IsNullOrEmpty(disabledPref) && PlayerPrefs.GetString(disabledPref) != "SUCCESS"){
+                this.GetComponent<Renderer>().material = disabledMaterial;
+            } else {
+                if (_selection != null) {
+                    var selectionRenderer = _selection.GetComponent<Renderer>();
+                    selectionRenderer.material = defaultMaterial;
+                    _selection = null;
                 }
-                _selection = selection;
-                if (Input.GetMouseButtonDown(0)) {
-                    if (selection.name != "ObjectiveMarker") {
-                        saveInventoryItem(selectableTag);
-                    } else if (selection.name == "ObjectiveMarker" && connectedTo != "") {
-                        PlayerPrefs.SetInt("ObjectiveMode", 1);
-                        PlayerPrefs.SetString("CurrentObjective", connectedTo);
-                        Cursor.visible = true;
-                        Cursor.lockState = CursorLockMode.None;
-                        inventory.SetActive(true);
+
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, 2)) {
+                    var selection = hit.transform;
+                    if (selection.CompareTag(selectableTag)) {
+                        var selectionRenderer = selection.GetComponent<Renderer>();
+                        if (selectionRenderer != null) {
+                            selectionRenderer.material = highlightMaterial;
+                        }
+                        _selection = selection;
+                        if (Input.GetMouseButtonDown(0)) {
+                            if (selection.name != "ObjectiveMarker") {
+                                saveInventoryItem(selectableTag);
+                            } else if (selection.name == "ObjectiveMarker" && connectedTo != "") {
+                                PlayerPrefs.SetInt("ObjectiveMode", 1);
+                                PlayerPrefs.SetString("CurrentObjective", connectedTo);
+                                Cursor.visible = true;
+                                Cursor.lockState = CursorLockMode.None;
+                                inventory.SetActive(true);
+                            }
+                            callback.Invoke();
+                        }
                     }
-                    callback.Invoke();
                 }
             }
         }
