@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cell.unity
     guid: e293f6e5b297d0145b6c5893ec89735b
+  - enabled: 1
+    path: Assets/Scenes/Maze.unity
+    guid: f20d788c6ec71ea40a2728cf0b37d3e2
   m_configObjects: {}

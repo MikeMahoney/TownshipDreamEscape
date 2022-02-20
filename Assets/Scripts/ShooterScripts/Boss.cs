@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class Boss : MonoBehaviour
 {
     public RectTransform healthBarRect;
-    public int maxHealth;
+    public GameObject shot;
+
     void Start ()
     {
         if(!PlayerPrefs.HasKey("SHIELD_COUNT")){
             PlayerPrefs.SetInt("SHIELD_COUNT", 4);
         }
+        InvokeRepeating("CreateShot", 2, 0.5f);
     }
     void Update()
     {
@@ -31,6 +33,16 @@ public class Boss : MonoBehaviour
             Debug.Log(healthBarRect.sizeDelta);
             healthBarRect.sizeDelta = new Vector2(healthBarRect.sizeDelta.x - 1, healthBarRect.sizeDelta.y);
             healthBarRect.localPosition = new Vector3(healthBarRect.localPosition.x + 0.5f, healthBarRect.localPosition.y, healthBarRect.localPosition.z);
+        }
+    }
+    void CreateShot()
+    {
+        if (healthBarRect.sizeDelta.x > 0) {
+            int randomZ = Random.Range(-8, 8);
+            Vector3 shotPosition = new Vector3(transform.position.x, shot.transform.position.y, transform.position.z-randomZ);
+            GameObject clone = Instantiate(shot, shotPosition, shot.transform.rotation) as GameObject;
+        } else {
+            CancelInvoke();
         }
     }
 }

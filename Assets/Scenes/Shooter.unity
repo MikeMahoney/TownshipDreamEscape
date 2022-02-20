@@ -1450,7 +1450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarRect: {fileID: 860607465}
-  maxHealth: 0
+  shot: {fileID: 8825931606131520082, guid: 58ac4f3a52ff3814a8eb3e776f2ca636, type: 3}
 --- !u!1 &1503863349
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,6 +2072,7 @@ MonoBehaviour:
     xMax: 12.5
     zMin: -12
     zMax: 12
+  healthBarRect: {fileID: 1185825461}
   shot: {fileID: 4028708859487848061, guid: 941302cafa1691941b86b0e9d40f078f, type: 3}
   soundBlast: {fileID: 796202875}
   fireRate: 0.5

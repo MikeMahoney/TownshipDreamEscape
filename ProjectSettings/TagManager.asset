@@ -40,6 +40,14 @@ TagManager:
   - InvitationSetItem
   - ObjectiveFour
   - SoundBlast
+  - BossShot
+  - GunConsoleApple
+  - WaterConsoleBanana
+  - DiscoConsoleOrange
+  - LabConsoleGrapes
+  - MazeConsoleFailed
+  - MazeMainConsole
+  - MazeGate
   layers:
   - Default
   - TransparentFX
