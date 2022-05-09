@@ -30,6 +30,7 @@ public class SceneSwitcher : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 1)) {
                 var selection = hit.transform;
+                Debug.Log(selection);
                 if (selection.CompareTag(selectableTag)) {
                     var selectionRenderer = selection.GetComponent<Renderer>();
                     if (selectionRenderer != null) {
