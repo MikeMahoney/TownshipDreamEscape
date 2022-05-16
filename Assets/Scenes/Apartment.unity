@@ -3697,7 +3697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1093779008}
-  inventory: {fileID: 0}
+  inventory: {fileID: 586914572}
   scenarios: {fileID: 1273417588}
   itemError: {fileID: 171576335}
   speed: 5
