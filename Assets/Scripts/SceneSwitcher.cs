@@ -73,8 +73,8 @@ public class SceneSwitcher : MonoBehaviour
             PlayerPrefs.SetFloat("PosY", 4.5f);
             PlayerPrefs.SetFloat("PosZ", -28);
         } else if (selectableTag == "ApartmentToHallwayGate") {
-            PlayerPrefs.SetFloat("PosX", 3.9f);
-            PlayerPrefs.SetFloat("PosY", 5.5f);
+            PlayerPrefs.SetFloat("PosX", 5f);
+            PlayerPrefs.SetFloat("PosY", 3.5f);
             PlayerPrefs.SetFloat("PosZ", -8.5f);
         }
     }
