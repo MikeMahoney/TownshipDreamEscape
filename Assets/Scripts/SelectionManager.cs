@@ -30,6 +30,8 @@ public class SelectionManager : MonoBehaviour
             if(!string.IsNullOrEmpty(disabledPref) && PlayerPrefs.GetString(disabledPref) != "SUCCESS"){
                 this.GetComponent<Renderer>().material = disabledMaterial;
             } else {
+                this.GetComponent<Renderer>().material = defaultMaterial;
+
                 if (_selection != null) {
                     var selectionRenderer = _selection.GetComponent<Renderer>();
                     selectionRenderer.material = defaultMaterial;

@@ -7,7 +7,6 @@ public class Water : MonoBehaviour
 {
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("PLAYER ENTERED");
         if(collider.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(10);

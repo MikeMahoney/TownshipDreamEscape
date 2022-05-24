@@ -7,6 +7,8 @@ public class LabMachine : MonoBehaviour
     [SerializeField] private GameObject labmanAlive;
     [SerializeField] private GameObject labmanDead;
     [SerializeField] private GameObject labmanSaved;
+    [SerializeField] private ParticleSystem tubeOne;
+    [SerializeField] private ParticleSystem tubeTwo;
 
     void Start()
     {
@@ -16,6 +18,17 @@ public class LabMachine : MonoBehaviour
         } else if (PlayerPrefs.GetString("LABMAN") == "FAILED") {
             labmanAlive.SetActive(false);
             labmanDead.SetActive(true);
+        }
+    }
+
+    void Update() {
+        if(
+            (PlayerPrefs.GetString("LABMAN") == "SUCCESS" || PlayerPrefs.GetString("LABMAN") == "FAILED") &&
+            tubeOne.isPlaying &&
+            tubeTwo.isPlaying
+        ) {
+           tubeOne.Stop();
+           tubeTwo.Stop();
         }
     }
 

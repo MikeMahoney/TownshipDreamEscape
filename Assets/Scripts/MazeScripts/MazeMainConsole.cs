@@ -11,8 +11,6 @@ public class MazeMainConsole : MonoBehaviour
     }
 
     void Update() {
-        Debug.Log(PlayerPrefs.GetString("SHIP_CONTROL"));
-        Debug.Log(particleLeft.GetComponent<ParticleSystem>().isPlaying);
         if (
             PlayerPrefs.GetString("SHIP_CONTROL") == "ACTIVE" &&
             !particleLeft.GetComponent<ParticleSystem>().isPlaying &&

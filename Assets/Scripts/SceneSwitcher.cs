@@ -59,7 +59,6 @@ public class SceneSwitcher : MonoBehaviour
     }
 
     public void saveCustomPlayerPosition() {
-        Debug.Log(selectableTag);
         if (selectableTag == "RoofGate") {
             PlayerPrefs.SetFloat("PosX", -4);
             PlayerPrefs.SetFloat("PosY", 11);
