@@ -39,7 +39,7 @@ public class SceneSwitcher : MonoBehaviour
                     }
                     _selection = selection;
                     if (Input.GetMouseButtonDown(0)) {
-                        if(sceneIndex == 1 || sceneIndex == 6) {
+                        if(sceneIndex == 1 || sceneIndex == 6 || sceneIndex == 10 || sceneIndex == 12 ) {
                             saveCustomPlayerPosition();
                             SceneManager.LoadScene(sceneIndex);
                         } else {
