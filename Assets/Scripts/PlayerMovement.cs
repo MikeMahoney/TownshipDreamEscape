@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     void Start() {
         if(
             (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 6) &&
-            PlayerPrefs.HasKey("PosX")
+            PlayerPrefs.HasKey("PosX") && PlayerPrefs.GetFloat("PreviousIndex") != 1
         ) {
             Vector3 position = Vector3.zero;
             position.x = PlayerPrefs.GetFloat("PosX");
