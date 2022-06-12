@@ -57,10 +57,6 @@ public class PlayerController : MonoBehaviour
         //     boundaryMax = 40;
         // }
 
-        if(PlayerPrefs.GetString("SHIP_CONTROL") != "ACTIVE"){
-            return;
-        }
-
         Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
         GetComponent<Rigidbody>().velocity = movement * speed;
 
