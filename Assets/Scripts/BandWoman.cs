@@ -8,6 +8,7 @@ public class BandWoman : MonoBehaviour
         if(
             PlayerPrefs.GetString("InvitationItem") == "SET" &&
             PlayerPrefs.GetString("BANDWOMAN") != "SUCCESS" &&
+            PlayerPrefs.GetString("HOMELESSCATS") == "SUCCESS" &&
             PlayerPrefs.GetInt("Time") < 7
         ){
             PlayerPrefs.SetString("BANDWOMAN", "SUCCESS");

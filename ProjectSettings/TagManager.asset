@@ -48,6 +48,7 @@ TagManager:
   - MazeConsoleFailed
   - MazeMainConsole
   - MazeGate
+  - TownHallGate
   layers:
   - Default
   - TransparentFX

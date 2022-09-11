@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Cell : MonoBehaviour
 {
+    [SerializeField] public GameObject glass;
+    [SerializeField] public GameObject henwen;
+    [SerializeField] public GameObject henwenDead;
+
     void Start() {
         if(!PlayerPrefs.HasKey("Time")){
             PlayerPrefs.SetInt("Time", 1);
@@ -11,6 +15,12 @@ public class Cell : MonoBehaviour
             PlayerPrefs.SetInt("Time", PlayerPrefs.GetInt("Time") + 1);
 
             this.UpdateObjectives();
+        }
+
+        if(PlayerPrefs.GetString("KILLHENWEN") == "SUCCESS"){
+            glass.SetActive(false);
+            henwen.SetActive(false);
+            henwenDead.SetActive(true);
         }
     }
 

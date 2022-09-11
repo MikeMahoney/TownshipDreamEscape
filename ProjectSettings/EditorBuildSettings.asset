@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MindHallway.unity
     guid: 54865dc71a457ac4587de389010f47b9
+  - enabled: 1
+    path: Assets/Scenes/TownHall.unity
+    guid: 2959161163a82ea4b96e1785d68115c6
   m_configObjects: {}

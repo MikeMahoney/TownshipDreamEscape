@@ -43,6 +43,7 @@
      <Compile Include="Assets\Scripts\OnClickInventory.cs" />
      <Compile Include="Assets\Scripts\HullShooterScripts\HeadCollider.cs" />
      <Compile Include="Assets\Scripts\InventoryUIItem.cs" />
+     <Compile Include="Assets\Scripts\MazeScripts\MazeMainConsole.cs" />
      <Compile Include="Assets\Scripts\ShooterScripts\Shield.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\GatewayInterface.cs" />
@@ -53,12 +54,14 @@
      <Compile Include="Assets\Scripts\ShooterScripts\BossShot.cs" />
      <Compile Include="Assets\Scripts\ShopOwner.cs" />
      <Compile Include="Assets\Scripts\Clock.cs" />
+     <Compile Include="Assets\Scripts\MazeScripts\MazeDoor.cs" />
      <Compile Include="Assets\Scripts\DialogManager.cs" />
      <Compile Include="Assets\Scripts\Sprinkler.cs" />
      <Compile Include="Assets\Scripts\ShooterScripts\Boss.cs" />
      <Compile Include="Assets\Scripts\ShooterScripts\BossHealth.cs" />
      <Compile Include="Assets\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\HullShooterScripts\EnemyLogic.cs" />
+     <Compile Include="Assets\Scripts\MazeScripts\MazeConsole.cs" />
      <Compile Include="Assets\Scripts\Water.cs" />
      <Compile Include="Assets\Scripts\ShooterScripts\Barrier.cs" />
      <Compile Include="Assets\Scripts\Scenario.cs" />
@@ -82,9 +85,6 @@
      <Compile Include="Assets\Scripts\BandWoman.cs" />
      <Compile Include="Assets\Scripts\Oscillator.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
-     <Compile Include="Assets\Scripts\MazeScripts\MazeMainConsole.cs" />
-     <Compile Include="Assets\Scripts\MazeScripts\MazeConsole.cs" />
-     <Compile Include="Assets\Scripts\MazeScripts\MazeDoor.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
@@ -33,6 +34,11 @@ public class Boss : MonoBehaviour
             Debug.Log(healthBarRect.sizeDelta);
             healthBarRect.sizeDelta = new Vector2(healthBarRect.sizeDelta.x - 1, healthBarRect.sizeDelta.y);
             healthBarRect.localPosition = new Vector3(healthBarRect.localPosition.x + 0.5f, healthBarRect.localPosition.y, healthBarRect.localPosition.z);
+
+            if(healthBarRect.sizeDelta.x <= 0){
+                PlayerPrefs.SetString("KILLHENWEN", "SUCCESS");
+                SceneManager.LoadScene(10);
+            }
         }
     }
     void CreateShot()
