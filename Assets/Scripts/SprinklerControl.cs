@@ -12,7 +12,7 @@ public class SprinklerControl : MonoBehaviour
         ){
             PlayerPrefs.SetString("SPRINKLER", "ACTIVE");
         } else if(
-            PlayerPrefs.GetString("SPRINKLER") == "ACTIVE"&&
+            PlayerPrefs.GetString("SPRINKLER") == "ACTIVE" &&
             sprinkler.GetComponent<ParticleSystem>().isPlaying
         ){
             PlayerPrefs.SetString("SPRINKLER", "INACTIVE");

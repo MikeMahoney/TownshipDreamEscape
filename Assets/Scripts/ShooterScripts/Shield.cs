@@ -10,6 +10,7 @@ public class Shield : MonoBehaviour
         Debug.Log("ON ENTER!");
         if(collider.gameObject.tag == "Shot")
         {
+            Debug.Log("SHIELD HIT");
             Destroy(collider.gameObject);
             health -= 1;
             if (health == 0) {

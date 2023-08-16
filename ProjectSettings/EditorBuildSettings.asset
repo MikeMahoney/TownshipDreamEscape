@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TownHall.unity
     guid: 2959161163a82ea4b96e1785d68115c6
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 7664b55b6e08e6344aa157f23e1a168b
   m_configObjects: {}

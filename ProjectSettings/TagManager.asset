@@ -49,6 +49,7 @@ TagManager:
   - MazeMainConsole
   - MazeGate
   - TownHallGate
+  - JeffTop
   layers:
   - Default
   - TransparentFX
@@ -56,7 +57,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - POSTPROCESS
   - 
   - Ground
   - 

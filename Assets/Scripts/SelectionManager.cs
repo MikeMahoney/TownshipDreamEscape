@@ -18,6 +18,9 @@ public class SelectionManager : MonoBehaviour
     private Transform _selection;
     public Transform player;
 
+    [SerializeField] public GameObject defaultPointer;
+    [SerializeField] public GameObject interactPointer;
+
     [SerializeField] private UnityEvent callback;
 
     void Update()
@@ -36,6 +39,11 @@ public class SelectionManager : MonoBehaviour
                     var selectionRenderer = _selection.GetComponent<Renderer>();
                     selectionRenderer.material = defaultMaterial;
                     _selection = null;
+
+                    if (interactPointer && defaultPointer) {
+                        interactPointer.SetActive(false);
+                        defaultPointer.SetActive(true);
+                    }
                 }
 
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -46,6 +54,10 @@ public class SelectionManager : MonoBehaviour
                         var selectionRenderer = selection.GetComponent<Renderer>();
                         if (selectionRenderer != null) {
                             selectionRenderer.material = highlightMaterial;
+                            if (interactPointer && defaultPointer) {
+                                interactPointer.SetActive(true);
+                                defaultPointer.SetActive(false);
+                            }
                         }
                         _selection = selection;
                         if (Input.GetMouseButtonDown(0)) {

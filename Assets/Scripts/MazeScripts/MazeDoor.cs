@@ -6,12 +6,12 @@ public class MazeDoor : MonoBehaviour
 {
     public GameObject appleLight;
     public GameObject bananaLight;
-    public GameObject orangeLight;
+    public GameObject greenLight;
     public GameObject grapesLight;
     void Update() {
         if(
             PlayerPrefs.GetString("APPLE") == "SUCCESS" &&
-            PlayerPrefs.GetString("ORANGE") == "SUCCESS" &&
+            PlayerPrefs.GetString("GREEN") == "SUCCESS" &&
             PlayerPrefs.GetString("BANANA") == "SUCCESS" &&
             PlayerPrefs.GetString("GRAPES") == "SUCCESS"
         ){
@@ -30,9 +30,9 @@ public class MazeDoor : MonoBehaviour
             bananaLight.SetActive(true);
         }
         if(
-            PlayerPrefs.GetString("ORANGE") == "SUCCESS"
+            PlayerPrefs.GetString("GREEN") == "SUCCESS"
         ){
-            orangeLight.SetActive(true);
+            greenLight.SetActive(true);
         }
         if(
             PlayerPrefs.GetString("GRAPES") == "SUCCESS"

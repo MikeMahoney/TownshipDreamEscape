@@ -18,7 +18,7 @@ public class BossShot : MonoBehaviour
 
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(6f);
         Destroy(gameObject);
     }
 }

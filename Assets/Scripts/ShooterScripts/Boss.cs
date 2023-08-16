@@ -6,11 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
-    public RectTransform healthBarRect;
+    public Text bossHealthUI;
+    public int bossHealth = 100;
     public GameObject shot;
+    public AudioSource hitSound;
+    [SerializeField] private Material originalMaterial;
+    [SerializeField] private Material flashMaterial;
 
     void Start ()
     {
+        // PlayerPrefs.SetString("GUNMAN", "SUCCESS");
         if(!PlayerPrefs.HasKey("SHIELD_COUNT")){
             PlayerPrefs.SetInt("SHIELD_COUNT", 4);
         }
@@ -24,18 +29,19 @@ public class Boss : MonoBehaviour
     }
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("ON ENTER!");
         if(collider.gameObject.tag == "Shot")
         {
-            Debug.Log("BOSS SHOT!");
-            //nDestroy shot
+            //Destroy shot
             Destroy(collider.gameObject);
 
-            Debug.Log(healthBarRect.sizeDelta);
-            healthBarRect.sizeDelta = new Vector2(healthBarRect.sizeDelta.x - 1, healthBarRect.sizeDelta.y);
-            healthBarRect.localPosition = new Vector3(healthBarRect.localPosition.x + 0.5f, healthBarRect.localPosition.y, healthBarRect.localPosition.z);
+            hitSound.Play();
 
-            if(healthBarRect.sizeDelta.x <= 0){
+            FlashColor();
+
+            bossHealth = bossHealth - 5;
+            bossHealthUI.text = bossHealth.ToString();
+
+            if(bossHealth <= 0){
                 PlayerPrefs.SetString("KILLHENWEN", "SUCCESS");
                 SceneManager.LoadScene(10);
             }
@@ -43,12 +49,22 @@ public class Boss : MonoBehaviour
     }
     void CreateShot()
     {
-        if (healthBarRect.sizeDelta.x > 0) {
+        if (bossHealth > 0) {
             int randomZ = Random.Range(-8, 8);
             Vector3 shotPosition = new Vector3(transform.position.x, shot.transform.position.y, transform.position.z-randomZ);
             GameObject clone = Instantiate(shot, shotPosition, shot.transform.rotation) as GameObject;
         } else {
             CancelInvoke();
         }
+    }
+
+    void FlashColor()
+    {
+        GameObject.Find("default").GetComponent<Renderer>().material = flashMaterial;
+        Invoke("ResetColor", 0.2f);
+    }
+    void ResetColor()
+    {
+        GameObject.Find("defaultBody").GetComponent<Renderer>().material = originalMaterial;
     }
 }

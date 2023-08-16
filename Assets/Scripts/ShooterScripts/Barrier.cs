@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Barrier : MonoBehaviour
 {
+    public AudioSource music;
+    public AudioSource bossMusic;
+
     void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.tag == "Shot")
@@ -15,6 +18,10 @@ public class Barrier : MonoBehaviour
         if(collider.gameObject.tag == "SoundBlast")
         {
             Debug.Log("SOUNDBLAST HIT!");
+
+            music.Stop();
+            bossMusic.Play();
+            
             PlayerPrefs.SetString("BarrierState", "DESTROYED");
             gameObject.SetActive(false);
         }

@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
 
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(12f);
         Destroy(gameObject);
     }
 }

@@ -96,5 +96,9 @@ public class PlayerMovement : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
             }
          }
+         if(Input.GetKeyDown(KeyCode.Escape) == true) {
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene(0);
+        }
     }
 }

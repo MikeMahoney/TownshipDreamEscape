@@ -22,7 +22,7 @@ public class HullShot : MonoBehaviour
 
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(6f);
         Destroy(gameObject);
     }
 }

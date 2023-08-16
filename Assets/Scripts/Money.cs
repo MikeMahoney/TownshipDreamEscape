@@ -7,10 +7,10 @@ public class Money : MonoBehaviour
 {
     void Update()
     {
-        // if (!PlayerPrefs.HasKey("Money")) {
-        //     PlayerPrefs.SetInt("Money", 0);
-        // }
-        PlayerPrefs.SetInt("Money", 200);
+        if (!PlayerPrefs.HasKey("Money")) {
+            PlayerPrefs.SetInt("Money", 0);
+        }
+        // PlayerPrefs.SetInt("Money", 200);
         gameObject.GetComponent<Text>().text = PlayerPrefs.GetInt("Money") + "u";
     }
 }

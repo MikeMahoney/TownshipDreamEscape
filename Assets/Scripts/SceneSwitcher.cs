@@ -12,6 +12,9 @@ public class SceneSwitcher : MonoBehaviour
     [SerializeField] private string disabledPref;
     [SerializeField] private int sceneIndex;
 
+    [SerializeField] public GameObject defaultPointer;
+    [SerializeField] public GameObject interactPointer;
+
     private Transform _selection;
     public Transform player;
 
@@ -24,6 +27,11 @@ public class SceneSwitcher : MonoBehaviour
                 var selectionRenderer = _selection.GetComponent<Renderer>();
                 selectionRenderer.material = defaultMaterial;
                 _selection = null;
+
+                if (interactPointer && defaultPointer) {
+                    interactPointer.SetActive(false);
+                    defaultPointer.SetActive(true);
+                }
             }
 
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -36,6 +44,11 @@ public class SceneSwitcher : MonoBehaviour
                     var selectionRenderer = selection.GetComponent<Renderer>();
                     if (selectionRenderer != null) {
                         selectionRenderer.material = highlightMaterial;
+
+                        if (interactPointer && defaultPointer) {
+                            interactPointer.SetActive(true);
+                            defaultPointer.SetActive(false);
+                        }
                     }
                     _selection = selection;
                     if (Input.GetMouseButtonDown(0)) {

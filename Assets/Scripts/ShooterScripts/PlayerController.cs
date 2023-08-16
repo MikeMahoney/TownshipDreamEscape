@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 [System.Serializable]
@@ -15,16 +16,23 @@ public class PlayerController : MonoBehaviour
     public float tilt;
     public Boundary boundary;
 
-    public RectTransform healthBarRect;
+    public Text playerHealthUI;
+    public int playerHealth = 100;
     public GameObject shot;
     public GameObject soundBlast;
     public float fireRate;
 
     private float nextFire;
 
+    [SerializeField] private Material originalMaterial;
+    [SerializeField] private Material flashMaterial;
+
     void Start ()
     {
-       if (
+        // PlayerPrefs.SetString("BANDWOMAN", "SUCCESS");
+        // PlayerPrefs.SetString("GUNMAN", "SUCCESS");  
+
+        if (
             PlayerPrefs.GetString("BANDWOMAN") == "SUCCESS"
         ){
             soundBlast.SetActive(true);
@@ -72,14 +80,26 @@ public class PlayerController : MonoBehaviour
     {
         if(collider.gameObject.tag == "BossShot")
         {
-            Debug.Log("PLAYER HIT!");
+            FlashColor();
+
+            playerHealth = playerHealth - 10;
+            playerHealthUI.text = playerHealth.ToString();
+
             Destroy(collider.gameObject);
-            healthBarRect.sizeDelta = new Vector2(healthBarRect.sizeDelta.x - 8, healthBarRect.sizeDelta.y);
-            healthBarRect.localPosition = new Vector3(healthBarRect.localPosition.x - 13, healthBarRect.localPosition.y, healthBarRect.localPosition.z);
-            if (healthBarRect.sizeDelta.x <= 0) {
-                SceneManager.LoadScene(1);
+
+            if (playerHealth <= 0) {
+                SceneManager.LoadScene(10);
             }
-            Debug.Log(healthBarRect.sizeDelta.x);
         }
+    }
+
+    void FlashColor()
+    {
+        GameObject.Find("townModel").GetComponent<Renderer>().material = flashMaterial;
+        Invoke("ResetColor", 0.2f);
+    }
+    void ResetColor()
+    {
+        GameObject.Find("townModel").GetComponent<Renderer>().material = originalMaterial;
     }
 }

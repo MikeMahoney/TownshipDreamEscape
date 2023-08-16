@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ShopMenu : MonoBehaviour
 {
-    void Update()
+    public void Close()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) == true) {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            gameObject.SetActive(false);
-        }
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        gameObject.SetActive(false);
     }
 }

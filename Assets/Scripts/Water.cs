@@ -12,4 +12,11 @@ public class Water : MonoBehaviour
             SceneManager.LoadScene(10);
         }
     }
+    void OnTriggerExit(Collider collider)
+    {
+        if(collider.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene(10);
+        }
+    }
 }

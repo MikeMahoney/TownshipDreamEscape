@@ -26,7 +26,7 @@ public class ShopItem : MonoBehaviour
 
     IEnumerator showError (){
         shopItemError.SetActive(true);
-        yield return new WaitForSeconds (2);
+        yield return new WaitForSeconds (1);
         shopItemError.SetActive(false);
     }
 }

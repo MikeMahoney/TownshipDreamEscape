@@ -10,7 +10,7 @@ public class HomelessKat : MonoBehaviour
         }
 
         if(PlayerPrefs.GetString("BANDWOMAN") == "SUCCESS" && PlayerPrefs.GetString("HOMELESSCAT") == "SUCCESS") {
-            gameObject.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }
